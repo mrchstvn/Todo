@@ -12,6 +12,7 @@ import { Eye, EyeOff } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { FieldLabel } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
+import ConditionalAuthFooter from "@/components/ui/conditional-auth-footer";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -165,6 +166,7 @@ export default function SignupPage() {
           </Button>
         </div>
       </form>
+      <ConditionalAuthFooter />
     </div>
   );
 }
