@@ -4,7 +4,7 @@ import { getSessionCookie } from "better-auth/cookies";
 
 const LOGGED_OUT_PAGES = ["/", "/login", "/signup"];
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const sessionCookie = getSessionCookie(request);
   const { pathname } = request.nextUrl;
   const isLoggedOutPage = LOGGED_OUT_PAGES.includes(pathname);
