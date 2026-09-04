@@ -31,9 +31,7 @@ export default function LoginPage() {
   async function onSubmit(data: loginInput) {
     setServerError("");
 
-    const { ...loginData } = data;
-
-    const { error: loginError } = await authClient.signIn.email(loginData);
+    const { error: loginError } = await authClient.signIn.email(data);
     if (loginError) {
       setServerError(loginError.message ?? "An error occurred during login.");
       return;
