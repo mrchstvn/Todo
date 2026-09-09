@@ -3,6 +3,8 @@
 import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import { Button } from "@/components/ui/button";
+import { LogOut } from "lucide-react";
+import { SidebarMenuButton } from "./sidebar";
 
 export default function LogoutButton() {
   const router = useRouter();
@@ -15,10 +17,10 @@ export default function LogoutButton() {
   }
   return (
     <div>
-      <Button onClick={handleLogout} variant="ghost">
-        {" "}
-        Logout{" "}
-      </Button>
+      <SidebarMenuButton onClick={handleLogout}>
+        <LogOut />
+        <span>Logout</span>
+      </SidebarMenuButton>
     </div>
   );
 }
