@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/sidebar";
 import { Home, CheckSquare, User, LogOut } from "lucide-react";
 import LogoutButton from "@/components/ui/logout-button";
+import SideBarLogo from "../ui/sidebar-logo";
+import { Separator } from "../ui/separator";
 
 const navItems = [
   { title: "Home", url: "/dashboard", icon: Home },
@@ -22,6 +24,8 @@ const navItems = [
 export function DashboardSidebar() {
   return (
     <Sidebar>
+      <SideBarLogo />
+      <Separator />
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Navigation</SidebarGroupLabel>
