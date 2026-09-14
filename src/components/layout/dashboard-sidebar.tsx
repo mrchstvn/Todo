@@ -11,14 +11,26 @@ import {
   SidebarMenuButton,
   SidebarFooter,
 } from "@/components/ui/sidebar";
-import { Home, CheckSquare, User, LogOut } from "lucide-react";
+import {
+  Home,
+  CheckSquare,
+  User,
+  LogOut,
+  Sun,
+  CalendarCheck,
+  LayoutDashboard,
+  CalendarDays,
+} from "lucide-react";
 import LogoutButton from "@/components/ui/logout-button";
 import SideBarLogo from "../ui/sidebar-logo";
 import { Separator } from "../ui/separator";
+import SidebarProfile from "../ui/sidebar-profile";
 
 const navItems = [
-  { title: "Home", url: "/dashboard", icon: Home },
-  { title: "Tasks", url: "/dashboard/tasks", icon: CheckSquare },
+  { title: "Today", url: "/today", icon: Sun },
+  { title: "This Week", url: "/weekly", icon: CalendarCheck },
+  { title: "Calendar", url: "/calendar", icon: CalendarDays },
+  { title: "All Tasks", url: "/all-tasks", icon: CheckSquare },
 ];
 
 export function DashboardSidebar() {
@@ -28,7 +40,7 @@ export function DashboardSidebar() {
       <Separator />
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel>Tasks</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navItems.map((item) => (
@@ -49,10 +61,7 @@ export function DashboardSidebar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton>
-              <User />
-              <span>En</span>
-            </SidebarMenuButton>
+            <SidebarProfile />
           </SidebarMenuItem>
           <SidebarMenuItem>
             <LogoutButton />

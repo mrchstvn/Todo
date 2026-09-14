@@ -17,7 +17,7 @@ export default function LogoutButton() {
   }
   return (
     <div>
-      <SidebarMenuButton onClick={handleLogout}>
+      <SidebarMenuButton onClick={handleLogout} className="cursor-pointer">
         <LogOut />
         <span>Logout</span>
       </SidebarMenuButton>

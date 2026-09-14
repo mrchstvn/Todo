@@ -43,7 +43,7 @@ export default function SignupPage() {
       );
       return;
     }
-    router.push("/dashboard");
+    router.push("/today");
   }
   return (
     <div className="min-w-md max-w-md m-auto border rounded-lg p-6 shadow-md">
