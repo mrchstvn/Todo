@@ -36,7 +36,7 @@ export default function LoginPage() {
       setServerError(loginError.message ?? "An error occurred during login.");
       return;
     }
-    router.push("/today");
+    router.push("/tasks");
   }
   return (
     <div className="min-w-md max-w-md m-auto border rounded-lg p-6 shadow-md">

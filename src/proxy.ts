@@ -14,12 +14,12 @@ export async function proxy(request: NextRequest) {
   }
 
   if (sessionCookie && isLoggedOutPage) {
-    return NextResponse.redirect(new URL("/today", request.url));
+    return NextResponse.redirect(new URL("/tasks", request.url));
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/", "/login", "/signup", "/today/:path*"],
+  matcher: ["/", "/login", "/signup", "/tasks/:path*", "/completed/:path*"],
 };
