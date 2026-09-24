@@ -25,7 +25,7 @@ export default function CreateButton() {
           render={
             <Button
               onClick={() => {}}
-              className="w-15 h-15 md:w-20 md:h-20 rounded-full bg-blue-950 absolute bottom-10 right-10 m-0 p-0 flex items-center justify-center shadow-lg hover:bg-blue-900 hover:cursor-pointer"
+              className="w-12 h-12 md:w-15 md:h-15 rounded-full bg-blue-950 absolute bottom-10 right-10 m-0 p-0 flex items-center justify-center shadow-lg hover:bg-blue-900 hover:cursor-pointer"
             >
               <Plus className="size-10 md:size-14 text-white" />
             </Button>
@@ -33,19 +33,32 @@ export default function CreateButton() {
         />
         <DialogContent className="sm:max-w-sm">
           <DialogHeader>
-            <DialogTitle>Create Task</DialogTitle>
+            <DialogTitle>Create Tasks</DialogTitle>
             <DialogDescription>
-              Fill in the details for your new task.
+              Fill in the details for your new tasks.
             </DialogDescription>
           </DialogHeader>
           <FieldGroup>
             <Field>
-              <Label htmlFor="name-1">Name</Label>
-              <Input id="name-1" name="name" defaultValue="Pedro Duarte" />
+              <Label htmlFor="name-1">Group name</Label>
+              <Input id="name-1" name="name" placeholder="Groceries" />
             </Field>
             <Field>
-              <Label htmlFor="username-1">Username</Label>
-              <Input id="username-1" name="username" defaultValue="@peduarte" />
+              <Label htmlFor="task-name-1">Task name</Label>
+              <div className="flex flex-row gap-1">
+                <Input
+                  id="task-name-1"
+                  name="taskName"
+                  placeholder="Buy milk"
+                />
+
+                <Button
+                  className="w-10 h-auto hover:cursor-pointer"
+                  variant="outline"
+                >
+                  <Plus />
+                </Button>
+              </div>
             </Field>
           </FieldGroup>
           <DialogFooter>
